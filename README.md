@@ -23,8 +23,6 @@ Lancer: "nodemon server"
 
 ● Frontend :
 
-Installer les dépendances: "npm install"
-
 Dans le dossier "frontend" lancez le fichier "index.html"
 
 
