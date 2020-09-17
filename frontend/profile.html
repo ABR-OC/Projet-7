@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+      <meta name="author" content="Adrien Brugère">
+      <title>Groupomania</title>
+      <meta name="description" 
+      content="Le projet consiste à construire un réseau social interne pour les employés de Groupomania. 
+      Le but de cet outil est de faciliter les interactions entre collègues. Le département RH de Groupomania 
+      a laissé libre cours à son imagination pour les fonctionnalités du réseau et a imaginé plusieurs briques 
+      pour favoriser les échanges entre collègues." />
+      
+      <link rel="stylesheet" href="./css/style.css" />
+
+      <!-- Bootstrap CSS only -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="img/favicon-removebg-preview.png" />
+      
+      <!-- Google fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <header>
+                <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #122441">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <img width="200" class="imglogo"
+                            src="img/icon-left-font-monochrome-white_rogné.png" alt="Logo Groupomania"/>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a href="index.html" class="nav-link ml-auto">Accueil </a>            
+                        <div id="connexion">             
+                        </div> 
+                    </div>
+                </nav>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h3 class="mt-2 d-flex justify-content-center text-light">Échangez vos idées entre collègues avec</h3>
+                        <div class="d-flex justify-content-center">
+                            <img width="300" class="d-flex justify-content-center" src="img/icon-above-font-removebg-preview.png" alt="Logo Groupomania" />
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <!-- Navigation - fin -->
+
+        <!-- Contenu de la page -->
+        <main id="my-account">
+            <h3 class="d-flex justify-content-center">Votre profil</h3>
+            <form>       
+                <div class="card card-container">
+                    <div class='form-input'>
+                        <label for="username"><b>Nom d'utilisateur:</b></label>
+                        <input type="text" name="username" id="username" required>
+                    </div>
+                    <div class='form-input'>
+                        <label for="email"><b>Email :</b></label><br />
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class='form-input'>
+                        <label for="psw"><b>Mot de passe :</b></label>
+                        <input type="password" name="psw" id="psw" required>
+                    </div>
+                    <div class='form-input'>
+                        <label for="file"><b>Image de profil :</b></label>
+                        <input type="file" name="image" id="file" required>
+                    </div>
+                    <div id="image"><img src="#" alt="Votre photo"></div>
+                    <div class="btn">
+                        <button type="submit" class="btn btn-lg btn-success btn-block btn-signin mr-2 mt-2 updatebtn" id="updatebtn">Modifier</button>
+                        <button type="submit" class="btn btn-lg btn-danger btn-block btn-signin deletebtn" id="deletebtn">Supprimer</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <!-- Contenu de la page - fin  -->
+
+        <!-- Footer -->
+        <footer>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center text-white mt-5 py-3">
+                © 2020 Copyright: Groupomania.com
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+    <!-- JS Script --> 
+    <script src="js/connexion.js" async></script>
+    <script src="js/profile.js" async></script>
+
+    <!-- JS fontawesome -->
+    <script src="https://kit.fontawesome.com/e439166e98.js" crossorigin="anonymous"></script>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+        crossorigin="anonymous"></script>
+
+    </body>
+
+
+</html>

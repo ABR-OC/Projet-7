@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+      <meta name="author" content="Adrien Brugère">
+      <title>Groupomania</title>
+      <meta name="description" 
+      content="Le projet consiste à construire un réseau social interne pour les employés de Groupomania. 
+      Le but de cet outil est de faciliter les interactions entre collègues. Le département RH de Groupomania 
+      a laissé libre cours à son imagination pour les fonctionnalités du réseau et a imaginé plusieurs briques 
+      pour favoriser les échanges entre collègues." />
+      
+      <link rel="stylesheet" href="./css/style.css" />
+
+      <!-- Bootstrap CSS only -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="img/favicon-removebg-preview.png" />
+      
+      <!-- Google fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <header>
+                <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #122441">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <img width="200" class="imglogo"
+                            src="img/icon-left-font-monochrome-white_rogné.png" alt="Logo Groupomania"/>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="connexion">
+                            <a href="login.html" class="mr-3" style="color: #8ebf42">Connexion </a>
+                            <a href="signup.html" style="color: #8ebf42"> Inscription</a>                
+                        </div> 
+                    </div>
+                </nav>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h3 class="mt-2 d-flex justify-content-center text-light">Bienvenue sur votre réseau social interne</h3>
+                        <div class="d-flex justify-content-center">
+                            <img width="300" class="d-flex justify-content-center" src="img/icon-above-font-removebg-preview.png" alt="Logo Groupomania" />
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <!-- Navigation - fin -->
+
+        <!-- Contenu de la page -->
+        <main>
+            <div class="container">
+                <h5 class="mt-5 d-flex justify-content-center">Veuillez vous connecter pour utiliser l'application !</h5>
+                <h6 class="d-flex justify-content-center">Vous devez être inscrit.e pour vous connecter.</h6>
+                <div class="card card-container">
+                    <img id="profile-img" class="profile-img-card mb-5" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                    <form>       
+                        <div class="container">
+                            <input type="email" class="form-control mb-2" placeholder="Adresse Email..." name="email" id="email" required autofocus>
+                            <input type="password" class="form-control" placeholder="Mot de passe..." name="psw" id="psw" required>
+                            <div id="error-message"></div>
+                            <div id="remember" class="checkbox mt-2">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Se rappeler de moi
+                                </label>
+                            </div>
+                            <div class="btn">
+                                <button type="submit" class="btn btn-lg btn-success btn-block btn-signin mr-2 mt-2 validbtn" id="btn">Valider</button>
+                                <button type="reset" class="btn btn-lg btn-danger btn-block btn-signin cancelbtn" value="Reset">Annuler</button>
+                            </div>
+                        </div>
+                    </form>
+                    <a href="#" class="forgot-password mt-4">
+                        Mot de passe oublié ?
+                    </a>
+                </div><!-- /card-container -->
+            </div><!-- /container -->
+        </main>
+        <!-- Contenu de la page - fin  -->
+
+        <!-- Footer -->
+        <footer>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center text-white mt-5 py-3">
+                © 2020 Copyright: Groupomania.com
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+    <!-- JS Script --> 
+    <script src="js/login.js" async></script>
+
+    <!-- JS fontawesome -->
+    <script src="https://kit.fontawesome.com/e439166e98.js" crossorigin="anonymous"></script>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    </body>
+
+
+</html>
