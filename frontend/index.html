@@ -38,11 +38,7 @@
                             <img width="200" class="imglogo"
                             src="img/icon-left-font-monochrome-white_rogné.png" alt="Logo Groupomania"/>
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a href="profile.html" class="nav-link ml-auto">Profil </a>            
+                        <a href="profile.html" class="nav-link ml-auto"><em class="fas fa-user"></em>Profil </a>            
                         <div id="connexion">             
                         </div> 
                     </div>
@@ -62,9 +58,11 @@
         <main id="index">
             <form>
                 <div class="post-form mt-n2">
+                    <label for="content"><strong>Votre message</strong></label>
                     <textarea id="content" rows="8" placeholder="Ecrivez votre message ici"></textarea>
-                    <input type="file" name="image">
-                    <button type="submit" class="btn btn-primary mt-3 validbtn" id="btn">Publier</button>             
+                    <label for="file"><strong>Votre image</strong></label><br />
+                    <input type="file" name="image" id="file"><br />
+                    <button type="submit" class="btn btn-outline-primary mt-3 validbtn" id="btn">Publier</button>             
                 </div>
                 <div id="error-message"></div>
             </form>

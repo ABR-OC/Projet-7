@@ -43,27 +43,33 @@ window.addEventListener('load', async () =>{
             if ( postUserId === userId) { // l'utilisateur est celui qui a écrit le post
                 article.innerHTML = `
                 <div class="post">
-                    <p class="username"><img src="${avatar}" id="avatar">${username}</p>
+                    <p class="username"><img src="${avatar}" id="avatar"><b class="ml-2">${username}</b></p>
+                    <hr>
                     <form class="content">
                         <textarea>${postContent}</textarea>
                         <button type="submit" class="validbtn" id="btn">Modifier</button>
+                        <br>
                         <div>
                             <i class="far fa-thumbs-up fa-2x"></i>
                         </div>  
                     </form>
+                    <hr>
                     <p class="date">${postDate}</p>
                     <i class="fas fa-times"></i>
                 </div>`              
             } else { // l'utilisateur n'est pas celui qui a écrit le post
                 article.innerHTML = `
                 <div class="post">
-                    <p class="username"><img src="${avatar}" id="avatar">${username}</p>
+                    <p class="username"><img src="${avatar}" id="avatar"><b class="ml-2">${username}</b></p>
+                    <hr>
                     <div class="content">
                         <p>${postContent}</p>
+                        <br>
                         <div>
                             <i class="far fa-thumbs-up fa-2x"></i>
                         </div>  
                     </div>
+                    <hr>
                     <p class="date">${postDate}</p>
                 </div>
                 ` 
@@ -72,30 +78,36 @@ window.addEventListener('load', async () =>{
             if (postUserId === userId) { // l'utilisateur est celui qui a écrit le post
                 article.innerHTML = `
                 <div class="post">
-                    <p class="username"><img src="${avatar}" id="avatar">${username}</p>
+                    <p class="username"><img src="${avatar}" id="avatar"><b class="ml-2">${username}</b></p>
+                    <hr>
                     <form class="content">
                         <textarea>${postContent}</textarea>
                         <img src="${imageUrl}">
                         <input type="file" name="image">
-                        <button type="submit" class="validbtn" id="btn">Modifier</button>  
+                        <button type="submit" class="validbtn" id="btn">Modifier</button> 
+                        <br><br>
                         <div>
                             <i class="far fa-thumbs-up fa-2x"></i>
                         </div>  
                     </form>
+                    <hr>
                     <p class="date">${postDate}</p>
                     <i class="fas fa-times"></i>
                 </div>`
             } else { // l'utilisateur n'est pas celui qui a écrit le post
                 article.innerHTML = `
                 <div class="post">
-                    <p class="username"><img src="${avatar}" id="avatar">${username}</p>
+                    <p class="username"><img src="${avatar}" id="avatar"><b class="ml-2">${username}</b></p>
+                    <hr>
                     <div class="content">
                         <p>${postContent}</p>
                         <img src="${imageUrl}">
+                        <br>
                         <div>
                             <i class="far fa-thumbs-up fa-2x"></i>
                         </div>  
                     </div>
+                    <hr>
                     <p class="date">${postDate}</p>
                 </div>`
             }
@@ -266,32 +278,38 @@ window.addEventListener('load', async () =>{
     }
 
     
-    // COMMENT  
-    // Rend visuellement le formulaire pour créer un commentaire
+    /* COMMENT */
+
+    /* Rend visuellement le formulaire pour créer un commentaire */
     const renderCommentForm = () => {
         const section = document.getElementById('post');
         const form = document.createElement('form');
         form.setAttribute('id', 'comment');
         form.innerHTML = `
         <textarea cols="30" rows="1" placeholder="Votre commentaire..."></textarea>
-        <i class="far fa-hand-point-right fa-2x"></i>`
+        <i class="far fa-hand-point-right fa-2x mt-3 ml-5"></i>`
         section.appendChild(form);        
     }
-    // Rend visuellement les commentaires postés
+
+    /* Rend visuellement les commentaires postés */
     const renderComments = (avatar, username, commentDate, content) => {
         const section = document.getElementById('post')
         const div = document.createElement('div')
         div.setAttribute('class', 'comment')
         div.innerHTML += `
-            <p class="d-flex justify-content-center username"><img src="${avatar}" id="avatar">${username} <span>${commentDate}</p>
-            <div class="d-flex justify-content-center">
+            
+            <div>
+                <p class="username"><img src="${avatar}" id="avatar"><strong class="ml-2">${username}</strong></p>
                 <p>${content}</p>
+                <i class="fas fa-times"></i>
+                <hr>
+                <p>${commentDate}</p>
             </div>
-            <i class="fas fa-times"></i>
         ` 
         section.appendChild(div)
     }
-    // Supprime commentaire
+
+    /* Supprime commentaire */
     const deleteComment = async (url, id) => {
         try {
             const response = await fetch(url, {
@@ -307,7 +325,8 @@ window.addEventListener('load', async () =>{
             throw err;
         }
     }
-    // Permet d'afficher les différents commentaires
+
+    /* Permet d'afficher les différents commentaires */
     const displayComment = async () => {
         renderCommentForm()
         const btn = document.querySelector('.fa-hand-point-right') 

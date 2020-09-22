@@ -38,19 +38,15 @@
                             <img width="200" class="imglogo"
                             src="img/icon-left-font-monochrome-white_rogné.png" alt="Logo Groupomania"/>
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
                         <div id="connexion">
-                            <a href="login.html" class="mr-3" style="color: #8ebf42">Connexion </a>
-                            <a href="signup.html" style="color: #8ebf42"> Inscription</a>                
+                            <a href="login.html" class="mr-3" style="color: #8ebf42"><strong class="fas fa-unlock-alt"></strong> Connexion </a>
+                            <a href="signup.html" style="color: #8ebf42"><strong class="far fa-address-book"></strong> Inscription</a>                
                         </div> 
                     </div>
                 </nav>
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h3 class="mt-2 d-flex justify-content-center text-light">Bienvenue sur votre réseau social interne</h3>
+                        <p class="mt-2 d-flex justify-content-center text-light display-4">Bienvenue sur votre réseau social interne</p>
                         <div class="d-flex justify-content-center">
                             <img width="300" class="d-flex justify-content-center" src="img/icon-above-font-removebg-preview.png" alt="Logo Groupomania" />
                         </div>
@@ -65,26 +61,20 @@
                 <h5 class="mt-5 d-flex justify-content-center">Veuillez vous connecter pour utiliser l'application !</h5>
                 <h6 class="d-flex justify-content-center">Vous devez être inscrit.e pour vous connecter.</h6>
                 <div class="card card-container">
-                    <img id="profile-img" class="profile-img-card mb-5" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                    <img id="profile-img" class="profile-img-card mb-5" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="photo" />
                     <form>       
                         <div class="container">
+                            <label for="email"><strong>Email</strong></label>
                             <input type="email" class="form-control mb-2" placeholder="Adresse Email..." name="email" id="email" required autofocus>
+                            <label for="psw"><strong>Mot de Passe</strongb></label>
                             <input type="password" class="form-control" placeholder="Mot de passe..." name="psw" id="psw" required>
                             <div id="error-message"></div>
-                            <div id="remember" class="checkbox mt-2">
-                                <label>
-                                    <input type="checkbox" value="remember-me"> Se rappeler de moi
-                                </label>
-                            </div>
                             <div class="btn">
                                 <button type="submit" class="btn btn-lg btn-success btn-block btn-signin mr-2 mt-2 validbtn" id="btn">Valider</button>
                                 <button type="reset" class="btn btn-lg btn-danger btn-block btn-signin cancelbtn" value="Reset">Annuler</button>
                             </div>
                         </div>
                     </form>
-                    <a href="#" class="forgot-password mt-4">
-                        Mot de passe oublié ?
-                    </a>
                 </div><!-- /card-container -->
             </div><!-- /container -->
         </main>

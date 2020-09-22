@@ -83,24 +83,30 @@ const renderPost = (username, avatar, imageUrl, postContent, postDate, postId) =
     if(imageUrl === null) {
         article.innerHTML = `
         <div class="post">
-            <p class="username"><img src="${avatar}" id="avatar">${username}</p>
+            <p class="username"><img src="${avatar}" id="avatar"><b class="ml-2">${username}</b></p>
+            <hr>
             <div class="content">
                 <p>${postContent}</p>
             </div>
+            <hr>
             <p class="date">${postDate}</p>
-            <a href="post.html?${postId}"><b>Voir post...</b></a>
+            <hr>
+            <a href="post.html?${postId}"><b class="text-primary">Voir le message...</b></a>
         </div>
         `        
     } else {
         article.innerHTML = `
         <div class="post">
-            <p class="username"><img src="${avatar}" id="avatar">${username}</p>
+            <p class="username"><img src="${avatar}" id="avatar"><b class="ml-2">${username}</b></p>
+            <hr>
             <div class="content">
                 <p>${postContent}</p>
                 <img src="${imageUrl}">
             </div>
+            <hr>
             <p class="date">${postDate}</p>
-            <a href="post.html?${postId}"><b>Voir post...</b></a>
+            <hr>
+            <a href="post.html?${postId}"><b class="text-primary">Voir le message...</b></a>
         </div>
         `
     }

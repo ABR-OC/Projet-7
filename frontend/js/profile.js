@@ -35,7 +35,7 @@ const getData = async (url) => {
 }
 getProfile()
 
-/* === UPDATE === */
+/* === MISE à JOUR === */
 
 /* Permet d'afficher l'image si nouveau fichier sélectionné */
 function readUrl(input) {
@@ -90,7 +90,7 @@ updateBtn.addEventListener('click', async (e) => {
     console.log(data.message)
 })
 
-/* === DELETE ACCOUNT === */
+/* === EFFACER PROFIL === */
 const deleteProfile = async (url) => {
     const response = await fetch(url, {
         method: 'DELETE',
