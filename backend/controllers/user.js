@@ -67,7 +67,7 @@ exports.getProfile = async (req, res) => {
     }
 }
 
-/* Mettre à jour un profile */
+/* Mettre à jour un profile 
 exports.updateProfile = async (req, res) => {
     try {
         if (req.file) {
