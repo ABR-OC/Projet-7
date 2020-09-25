@@ -12,6 +12,6 @@ router.post('/api/auth/signup', multer, userController.signup);
 router.post('/api/auth/login', rateLimiter, userController.login);
 router.get('/user/profile', auth, userController.getProfile);
 router.delete('/user/profile', auth, multer, userController.deleteProfile);
-router.put('/user/profile', auth, multer,  userController.updateProfile);
+//router.put('/user/profile', auth, multer,  userController.updateProfile);
 
 module.exports = router;
