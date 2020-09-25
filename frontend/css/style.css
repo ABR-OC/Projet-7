@@ -201,7 +201,7 @@ footer {
 }
 
 #index .post-form {
-  width: 300px;
+  width: 500px;
   margin-top: 50px;
 }
 
@@ -209,7 +209,7 @@ footer {
   background: url("../img/favicon62.png") center center no-repeat;
   border: 1px solid #EDEDED;
   resize: none;
-  width: 300px;
+  width: 500px;
   border-radius: 5px;
   padding: 8px;
   background-color: #fff;
@@ -222,7 +222,7 @@ footer {
 }
 
 #index article, #post article, form#comment {
-  width: 300px;
+  width: 500px;
   margin: 50px auto 0 auto;
   border-radius: 5px;
   padding: 8px;
@@ -292,7 +292,7 @@ footer {
 
 #post textarea, #comment textarea {
   resize: none;
-  width: 240px;
+  width: 440px;
   border-radius: 5px;
   padding: 8px;
   background-color: #fff;
@@ -319,7 +319,7 @@ footer {
     position: relative;
   }
   form#comment {
-    width: 300px;
+    width: 500px;
     margin: 10px auto;
     border-radius: 5px;
     padding: 8px;
@@ -330,7 +330,7 @@ footer {
     border-top: 0;
   }
   #post div.comment {
-    width: 300px;
+    width: 500px;
     margin: 0 auto;
     border-radius: 5px;
     padding: 8px;
@@ -339,4 +339,28 @@ footer {
     font-size: 14px;
     border: 1px solid  #EDEDED;
     position: relative;
+  }
+
+  @media only screen and (min-width : 200px) and (max-width : 480px) {
+    #index form {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #index .post-form {
+      width: 300px;
+      
+    }
+    #index textarea {
+      width: 300px;
+    }
+    #index article, #post article, form#comment {
+      width: 300px;
+    }
+    #post textarea, #comment textarea {
+      width: 240px;
+    }
+    #post div.comment {
+      width: 300px;
+    }
   }
