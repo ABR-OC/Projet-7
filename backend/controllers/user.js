@@ -67,7 +67,7 @@ exports.getProfile = async (req, res) => {
     }
 }
 
-/* Mettre à jour un profile 
+/* Mettre à jour un profile */
 exports.updateProfile = async (req, res) => {
     try {
         if (req.file) {
@@ -87,8 +87,17 @@ exports.updateProfile = async (req, res) => {
         } : {
            ...JSON.parse(req.body.user) 
         }
-        if (userObject.password > 7) {
+        
+        if (userObject.password != '') {
             userObject.password = await bcrypt.hash(userObject.password, 8);
+        }
+        else {
+            const user = await User.findOne({ where: {
+                id: req.user.id
+            }})
+            console.log(user.Password)
+
+            userObject.password = user.hashedPassword 
         }
         console.log(userObject.password)
 
