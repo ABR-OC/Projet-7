@@ -1,10 +1,10 @@
 
-//const fileField = document.querySelector('input[type=file]')
+const fileField = document.querySelector('input[type=file]')
 const myImage = document.querySelector('#image img')
 const myUsername = document.getElementById('username')
 const myEmail = document.getElementById('email')
-//const myPassword = document.getElementById('psw')
-//const updateBtn = document.getElementById('updatebtn')
+const myPassword = document.getElementById('psw')
+const updateBtn = document.getElementById('updatebtn')
 const deleteBtn = document.getElementById('deletebtn')
 
 const token = 'Bearer ' + sessionStorage.getItem('token') // Récupère le token stocké dans local storage
@@ -35,9 +35,9 @@ const getData = async (url) => {
 }
 getProfile()
 
-/* === MISE à JOUR === 
+/* === MISE à JOUR === */
 
-/* Permet d'afficher l'image si nouveau fichier sélectionné 
+/* Permet d'afficher l'image si nouveau fichier sélectionné */
 function readUrl(input) {
     if (input.files && input.files[0]) {
         const reader = new FileReader()
@@ -52,7 +52,7 @@ fileField.addEventListener('change', function() {
     readUrl(this)
 })
 
-/* Modifie la ou les donnée(s) de l'utilisateur et envoie au serveur 
+/* Modifie la ou les donnée(s) de l'utilisateur et envoie au serveur */
 const updateData = async (url, formData) => {
     try {
         const response = await fetch(url, {
@@ -69,7 +69,7 @@ const updateData = async (url, formData) => {
     }
 }
 
-/* Gestionnaire d'évènement créé sur clic du bouton 'Modifier' 
+/* Gestionnaire d'évènement créé sur clic du bouton 'Modifier' */
 updateBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     let user = { // Donnée de l'utilisateur
