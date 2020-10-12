@@ -30,7 +30,7 @@ Développement (Frontend et Backend) d'un réseau social d'entreprise pour une s
 Une grande liberté est donnée pour développer ce projet: il faut simplement respecter la charte graphique fournie.
 
 <h3>Remarques sur l'évaluation</h3><br>
-<b>Compétences évaluées</b><br>
+<b>Compétences évaluées</b><br><br>
 
  
 
