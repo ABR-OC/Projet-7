@@ -1,5 +1,5 @@
-# Projet-7
-Créez un réseau social d’entreprise : Groupomania
+# Projet-7 : Créez un réseau social d’entreprise : Groupomania
+<img scr="/8.png">
 
 <b>Technologies utilisées :</b>
 
